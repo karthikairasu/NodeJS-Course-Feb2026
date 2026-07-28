@@ -1,0 +1,10 @@
+<p>register works!</p>
+<pre>
+  <form #registerForm="ngForm" (ngSubmit)="onSubmit()">
+    username: <input type="text" name="username" [(ngModel)]="users.username"><br>
+    password: <input type="password" name="password" [(ngModel)]="users.password"><br>
+    email: <input type="email" name="email" [(ngModel)]="users.email"><br>
+    mobile: <input type="number" name="mobile" [(ngModel)]="users.mobile"><br>
+    <button type="submit">Register</button>
+  </form>
+</pre>

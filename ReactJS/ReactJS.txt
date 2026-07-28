@@ -1,0 +1,578 @@
+Prerequisites: HTML, CSS, JavaScript/TypeScript basics
+Target Audience: Developers building modern web applications with React
+
+Day‑wise Training Plan
+Day 1: Introduction to React & Setup (2 hrs)
+
+What is React, Virtual DOM, SPA concepts
+React ecosystem overview
+Environment setup (Node.js, VS Code, Vite/CRA)
+JSX basics and syntax
+Exercise: Hello World app with JSX customization
+
+Day 2: Components & Props (2 hrs)
+
+Functional components and composition
+Import/export patterns
+Props, destructuring, defaults
+Exercise: Profile card system using reusable components
+
+Day 3: State & Event Handling (2 hrs)
+
+State vs props
+useState hook
+Event handling and forms
+Exercise: Interactive to‑do list (add items)
+
+Day 4: Lists, Keys & Conditional Rendering (2 hrs)
+
+Rendering lists with map()
+Keys and list optimization
+Conditional rendering techniques
+Exercise: To‑do list with delete and conditional UI
+
+Day 5: Forms & Controlled Components (2 hrs)
+
+Controlled inputs
+Form submission and validation
+Error handling and reset
+Exercise: Contact/registration form with validation
+
+Day 6: useEffect & Side Effects (2 hrs)
+
+Side effects and dependency array
+Data fetching, timers, cleanup
+Exercise: Weather app using API data
+
+Day 7: Lifecycle & Advanced Hooks (2 hrs)
+
+Component lifecycle with hooks
+useRef for DOM access
+Performance optimization (useMemo, useCallback)
+Exercise: Debounced search component
+
+Day 8: Context API & State Management (2 hrs)
+
+Prop drilling problem
+Context creation and useContext
+Global state patterns
+Exercise: Dark/light theme toggle
+
+Day 9: React Router (2 hrs)
+
+BrowserRouter, Routes, Route
+Dynamic and nested routing
+Protected routes and navigation
+Exercise: Blog application with multiple routes
+
+Day 10: Custom Hooks & Reusability (2 hrs)
+
+Creating and using custom hooks
+Extracting reusable logic
+Exercise: Build and implement multiple custom hooks
+
+Day 11: Styling in React (2 hrs)
+
+CSS options, modules, styled‑components
+Tailwind CSS basics
+Responsive design patterns
+Exercise: Redesign apps with modern styling
+
+Day 12: APIs & Async Operations (2 hrs)
+
+Fetch vs Axios
+CRUD operations
+Loading and error states
+Exercise: API‑based CRUD application
+
+Day 13: Final Project & Best Practices (2 hrs)
+
+Project planning and structure
+End‑to‑end development
+Performance tips and pitfalls
+Final Projects (choose one):
+E‑commerce catalog
+Social media feed
+Task management app
+Recipe finder
+
+
+Tools & Resources
+
+React DevTools, VS Code extensions
+CodeSandbox, StackBlitz, GitHub
+
+Assessment
+
+Daily hands‑on checkpoints
+Mid‑course mini project (Day 7)
+Final project with code review
+
+
+Course Completion Outcomes
+By the end of this course, learners will:
+
+Build modern React applications
+Manage state and side effects
+Create reusable components and hooks
+Integrate REST APIs
+Implement routing and styling best practices
+----------------------------------
+Day1 React course
+
+    Javascript es6
+        - let and const
+            -let block scope
+
+                # for(var i = 1; i<=3; i++){
+                # setTimeout(function(){
+                #     console.log(i)
+                # }, 1000)
+
+                # }
+            - const block scope
+        - arrow function
+        - template literal
+        - destructuring
+        - spread and rest operators
+        - default parameters
+        - oops concepts
+        - modules
+        - promises
+        - generators
+        - fetch api
+-------------------------------------------
+Day2 React
+    - arrow function
+
+        function regularFunction(){
+          this.name = 'karthi';
+
+          setTimeout(function(){
+            console.log(this.name);
+          })
+
+          setTimeout(()=>{
+            console.log(this.name);
+          })
+        }
+
+        regularFunction()
+
+    - template leteral `values`
+    - map(k, v), Map - set(k, v), get, has, delete
+    - map and forEach
+    - destructuring
+
+----------------------------------
+Day3 React
+    - spread / rest
+    - class
+    - promises
+        - asynchronies programming
+        - const promise = new Promise(( resolve, reject)=>{})
+                |                         |               |
+                |                         |               >local work
+                |                  resolve, reject
+                |                       |       |
+                |---------------------then()  catch()
+
+                const makePayment = (amount) =>{
+                  return new Promise((resolve, reject)=>{
+                    setTimeout(()=>{
+                      if(amount > 1000){
+                        resolve("payment successfully");
+                      }else{
+                        reject("payment failed");
+                      }
+                    }, 2000);
+                  } );
+                }
+                makePayment(1500)
+                .then((result)=>{console.log(result)});
+                .catch((error)=>{console.log(error)});
+
+      - Generator (pause/resume)
+
+            function fname(){
+              statements;
+            }
+            function * fname(){
+              statements;
+            }
+
+    Document: Real-Time Use Case Scenarios for JavaScript ES6 Features
+      1. Introduction
+      Project Name: E-Commerce Web Application
+      Technology: JavaScript ES6
+      Purpose:
+      To demonstrate how ES6 features are used in real-world enterprise web applications to improve code readability, performance, and maintainability.
+      ---------------------
+      2. Business Scenario Overview
+      A company is developing an E-Commerce Web Platform where users can:
+      Browse products
+      Add products to cart
+      Apply discounts
+      Manage user profiles
+      Process orders
+      JavaScript ES6 features are used in the front-end application to handle business logic efficiently.
+      -------------------------
+      3. ES6 Feature-Based Real-Time Use Cases
+      3.1 Arrow Functions
+      Use Case: Calculate Total Price in Shopping Cart
+      Business Requirement:
+      Calculate the total cart value including tax and discount.
+      Benefit:
+      Shorter syntax
+      No need for function keyword
+      Automatic lexical this binding
+      3.2 Let and Const
+      Use Case: Manage User Session State
+      Benefit:
+      Block scope variables
+      Prevent variable redeclaration
+      Secure constant values
+      3.3 Template Literals
+      Use Case: Display Order Confirmation Message
+      Benefit:
+      Easy string interpolation
+      Multi-line strings support
+      3.4 Default Parameters
+      Use Case: Apply Default Shipping Charges
+      Business Requirement:
+      If shipping charge not provided, apply default ₹50.
+      Benefit:
+      Avoid undefined values
+      Cleaner function logic
+      3.5 Destructuring Assignment
+      Use Case: Extract Product Details from API Response
+      Benefit:
+      Faster variable extraction
+      Clean and readable code
+      3.6 Spread Operator (...)
+      Use Case: Add New Product to Cart List
+      Benefit:
+      Immutable array operations
+      Avoid direct object mutation
+      3.7 Rest Operator (...)
+      Use Case: Apply Multiple Discount Codes
+      Benefit:
+      Handle unlimited parameters
+      Flexible function design
+      3.8 Classes
+      Use Case: Product Entity Management
+      Benefit:
+      Object-oriented programming
+      Cleaner prototype handling
+      3.10 Promises
+      Use Case: Fetch Product Data (Static data )
+      Benefit:
+      Handle async operations
+      Avoid callback hell
+      3.11 Map and Set
+      Use Case: Store Unique Coupon Codes
+      Benefit:
+      Store unique values
+      Faster lookup
+      3.12 for...of Loop
+      Use Case: Iterate Over Cart Items
+      Benefit:
+      Cleaner iteration
+      Works with iterable objects
+      4. Non-Functional Benefits
+      Feature                        Benefit
+
+      Arrow Functions               Less boilerplate code
+
+      Let/Const                    Better variable control
+
+      Modules                      Maintainable architecture
+
+      Classes                      OOP structure
+
+      Promises                     Async handling
+
+      Spread/Rest                 Functional programming support
+
+------------------------------------
+Day4 React
+
+      - Generator example
+          function* fname(){
+            yield-> pause
+          }
+          var obj = fname();
+          obj.next();
+
+          ex:
+          // test.js
+          function* testGenerate(){
+            yield "first value";
+            yield "Second value";
+            yield "third value";
+            return "done";
+          }
+          var gen = testGenerate();
+          console.log(gen.next());
+          console.log(gen.next());
+          console.log(gen.next());
+          console.log(gen.next());
+
+          // test2.js
+          function* pagination(items, pageSize){
+            for(let i=0; i<items.length; i++){
+              yield items.slice(i, i+pageSize);
+            }
+          }
+
+          const items = ["a", "b", "c", "d", "e", "f", "g"];
+          const pageSize = 3;
+          const paginator = pagination(items, pageSize);
+          console.log(paginator.next().value);
+          console.log(paginator.next().value);
+          console.log(paginator.next().value);
+          console.log(paginator.next().value);
+
+React   - JavaScript library
+        - UI
+        - Component based architecture
+        - Virtual Dom (DOM Visualizer- https://bioub.github.io/dom-visualizer/)
+        - JSX
+        - One way Data binding
+
+            npx create-react-app appName - cmd for craete new react app
+            npx create-react-app appName --template typescript
+--------------------------------------
+Day5 React
+
+    1. Component -> building block
+
+      - function Component -> stateless (V16.2-hooks)
+
+      - class Component -> stateful -> lifecycle build in function
+
+    2. class clasname extends React.Component{
+      render(){
+        return "JSX"
+      }
+    }
+
+    3. function fname(){
+      return(
+        JSX
+      )
+    }
+    component name must starts with uppercase (n number of component create a single component-must need to export)
+
+    4. State and Props
+
+        - State -> within the component perform dynamic operation
+            - class component
+                this.state = "abc" --initial value
+                    |--> object
+                this.setState()-update state value
+
+            - function component
+                const [name, setName] = useState(value)
+-------------------------------------------------
+Day6 React
+
+    1.Props -> data pass to parent to child (one way data binding)
+
+      - class ---> object --> this.props
+                              <child name="this.props.name" />>
+      - function  fname(props){
+          props.name
+        }
+        parent to child passing props
+
+      - Hooks- functional component
+
+          ➤ useState 🪶
+              👉 State with in a component
+
+          ➤ useEffect 🪶
+              👉 Side Effect  in a component
+
+
+          ➤ useContext 🪶
+              👉 global state values accessing to nested component
+
+          ➤ useRef 🪶
+              👉accessing dom element directly
+
+          ➤ useCallback 🪶
+              👉retun function
+
+          ➤ useMemo 🪶
+              👉return value
+-------------------------------------------------
+Day7 React
+
+    1. useContext - avoid props drilling to access state value
+
+        const context = createContext();
+                              |
+                              |-return a component
+
+                      <context.Provider value={}>
+                      {children}
+                      </context.Provider>
+
+    2. useRef - persist values between renders
+
+            const [name, setName] = useState("Karthi");
+
+            const previousName = useRef('');
+            useEffect(() => {
+                previousName.current = name;
+                console.log(name);
+            }, [name]);
+
+    3. useReducer - The useReducer hook is a powerful alternative to useState for managing complex state logic in React applications
+
+            const [state, dispatch] = useReducer(reducer, initialArg, init?)
+
+            1. to create a state without using useState
+
+            function fname(state, action){
+              return state;
+            }
+            state - receive value
+            dispatch function - action to reducer
+----------------------------------------------------
+Day8 React
+
+      🪶 Es6 local storage and session storage
+
+      🪶 Redux: 👉 predictable state container
+
+              action
+                |
+              dispatch
+                |
+              reducer
+                |
+              state
+                |
+              Store
+                |
+               view
+
+              1. State    👉 Object
+              2. reducer  👉 Javascript Function
+              3. Store    👉 Global state
+              4. Component👉 view/action
+
+      🪶 installation
+
+            - npm i redux
+            - npm i react-redux
+
+              create store (redux)
+
+              react-redux (handling action and states)
+
+      🪶 Redux Using
+
+            - Redux
+                createStore(reducer)
+                const cs = createStore(reducer)
+
+            - react-redux
+                useDispatch() => action to reducer
+                useSelector() => access to value
+                <Provider> -> assign store
+
+
+----------------------------------------------------
+Day9 React
+
+      🪶 JavaScript ES6 (default Feature)
+            Fetch API
+
+      🪶 Axios library (need to install the module)
+            Module -> React
+              - npm i axios
+
+            👉 axios.get(url).then(function).catch(function)
+              - Response any type of data
+
+      🪶 React + ExpressJS example
+
+            👉 Axios use to fetch data
+            👉 express api connect react
+            👉 cors issue - npm i cors
+                - api app.js file import and use var cors = require('cors');
+                - app.use(cors());
+
+      🪶 Java backend API
+
+            👉 Spring initializar - https://start.spring.io/
+              - Project -> select Maven option
+              - Dependencies - Spring Web
+              - Then -> Click Generate
+              - Extract the downloaded file
+              - Intellij IDEA tool open the project
+
+----------------------------------------------------
+Day10 React
+
+     🪶 MySQL database(but i used mongodb)
+          - npm install mongoose dotenv
+          - npm install --save-dev nodemon
+          - Create and view data react, mongodb apidata
+          - redux using view api data
+
+
+----------------------------------------------------
+Day11 React
+
+      🪶 Middleware
+
+          👉 Action  ----------> Reducer (without middleware syn operation only)
+            dispatch
+          👉 Thunk, and Saga
+              - npm i thunk
+              - npm i saga
+          👉 Thunk - createStore(reducer, middleware)
+                                    |
+                                applyMiddleware(object)
+          👉 Saga - why is need to use(test your asyn flow easily test compare to thunk)
+
+              - redux-saga
+              - listen action
+              - add Functions
+              - dispatch action to reducer
+              - npm i redux-saga
+              - generator function
+                  - takeEvery -> help to lisent action
+                  - put -> dispatch action to reducer
+
+          👉 React-router-dom
+
+              - BrowserRouter -> Enable Configuration
+              - <Routes> -> Group routing
+              - <Route> -> Maps URL to Component
+              - <Link>  -> To create Links(without refresh)
+              - <Outlet> -> Display components
+
+
+----------------------------------------------------
+Day12 React
+
+      🪶 react-router-dom installation - explain full concept
+
+          - npm i react-router-dom
+          - useParam
+          - Parent and Child Component Routing
+          - useNavigate
+          - lazy loading -> suspense example
+
+-----------------------------------------------------
+Day13 React
+
+      🪶 React testing
+
+          👉 Jest - framework
+              how to do component test case and forms test case
